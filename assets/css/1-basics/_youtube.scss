@@ -41,7 +41,7 @@
     }
 
     .youtube-player .play:hover {
-        background: url("/assets/img/youtube-icon-red.png") no-repeat;
+        background: url("{{ site.github.url }}/assets/img/youtube-icon-red.png") no-repeat;
     }
 
     .youtube-player .play {
@@ -52,6 +52,6 @@
         margin-left: -51px;
         margin-top: -36px;
         position: absolute;
-        background: url("/assets/img/youtube-icon-dark.png") no-repeat;
+        background: url("{{ site.github.url }}/assets/img/youtube-icon-dark.png") no-repeat;
         cursor: pointer;
     }
