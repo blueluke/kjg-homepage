@@ -1,13 +1,13 @@
 <header class="navigation" role="banner">
   <div class="navigation-wrapper">
-    <a href="/" class="logo">
+    <a href="{{ site.github.url }}" class="logo">
       <img src="{{ site.github.url }}/assets/img/wortmarke.svg" alt="Logo - Seelenbohrer">
     </a>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
         <li class="nav-link">
-          <a href="{{ site.github.url }}" {% if page.url == "{{ site.github.url }}/" %}class="active"{% endif %}>Willkommen</a>
+          <a href="{{ site.github.url }}/" {% if page.url == "{{ site.github.url }}/" %}class="active"{% endif %}>Willkommen</a>
         </li>
         <li class="nav-link">
           <a href="{{ site.github.url }}/aktuelles" {% if page.url == "{{ site.github.url }}/aktuelles/" %}class="active"{% endif %}>Aktuelles</a>
