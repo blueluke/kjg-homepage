@@ -1,0 +1,63 @@
+---
+title: Über Uns - KjG Goldbach
+root: ..
+layout: default
+---
+
+<div class="about-body">
+
+  <div class="about-description">
+    <img src="{{ site.root }}/assets/img/kjg-leiter.jpg">
+    <div class="about-text">
+      <h3>Wer sind wir?</h3>
+      <div>
+        <p>Wir sind eine Goldbacher Jugendgruppe...<br/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum,
+        eleifend non ipsum id, suscipit ultricies neque.<br/>
+        <b>Hier könnten noch Infos zu Geschichte stehen. Kurze Teamvorstellung? Oder sowas...</b></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-aktionen">
+    <div class="about-text">
+      <h3>Unsere Aktionen</h3>
+      <div>
+        <p>Gruppenstunden, Zeltlager und so en Zeug halt...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vestibulum mollis velit non gravida venenatis.
+        Praesent consequat lectus purus, ut scelerisque velit condimentum eu.</p>
+      </div>
+    </div>
+    <div class="about-gallery">
+      {% include image_gallery.html images="gruppe.jpg, jugg.jpg" path="/assets/img" options="animateHeight: true, nav: false" %}
+    </div>
+  </div>
+
+  <div class="about-map">
+    <iframe id="aboutmap" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=9.173168241977693%2C50.00612205067972%2C9.175163805484774%2C50.00716842908888&amp;layer=mapnik&amp;marker=50.006644380805525%2C9.174166023731232"></iframe>
+    <div class="about-text">
+      <h3>Das KjG-Hoim</h3>
+      <div>
+        <p>Oh eine Schatzkarte!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vestibulum mollis velit non gravida venenatis.
+        Praesent consequat lectus purus, ut scelerisque velit condimentum eu.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// var mymap = L.map('aboutmap', { scrollWheelZoom:false }).setView([50.00526,9.17458], 15);
+//
+//     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+//     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+//   }).addTo(mymap);
+//
+//   mymap.on('resize', function () {
+//       mymap.invalidateSize();
+//   });
+</script>

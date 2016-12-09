@@ -1,0 +1,83 @@
+---
+title: KjG Goldbach
+root:
+layout: default
+---
+
+
+<div class="front-hero">
+  <div class="hero">
+    <a class="hero-header" href="/juggerturnier/turnier">
+      <img src="/assets/img/pompfen.svg"></img>
+      <div class="hero-text">
+        <h1>Juggerturnier</h1>
+        <h2>am 3. Juni 2017</h2>
+        <h4>Wir veranstalten ein Juggerturnier für interessierte Jugendgruppen und Vereine. Blablabla...</h4>
+      </div>
+    </a>
+    <div class="hero-video">
+      <!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4FUxKwKryz8?controls=0" frameborder="0" allowfullscreen></iframe> -->
+      <div class="youtube-player" data-id="4FUxKwKryz8"></div>
+    </div>
+  </div>
+
+<div class="front-body">
+  <div class="front-cards">
+    <a class="front-card" href="/about">
+      <div class="card-image">
+        <img src="/assets/img/kjg-leiter.jpg" alt="">
+      </div>
+      <div class="card-header">
+        <h3>Wer sind wir?</h3>
+      </div>
+      <div class="card-text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
+      </div>
+    </a>
+    <a class="front-card" href="/juggerturnier/">
+      <div class="card-image">
+        <img src="/assets/img/jugg.jpg" alt="">
+      </div>
+      <div class="card-header">
+        <h3>Was ist Jugger?</h3>
+      </div>
+      <div class="card-text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
+      </div>
+    </a>
+
+    {% include calendar.html %}
+
+  </div>
+  <div class="front-posts">
+    {% for post in site.posts limit:site.frontpage-news %}
+      <div class="front-post">
+        {% if post.header_img != nil %}
+          <div class="front-post-header">
+            <img src="{{ post.header_img }}"></img>
+            <h1>
+              {{ post.title | escape }}
+            </h1>
+          </div>
+        {% endif %}
+        <div class="front-post-content">
+          {% if post.header_img == nil %}
+            <h1 class="aktuelles-title">
+              {{ post.title | escape }}
+            </h1>
+          {% endif %}
+          {{ post.content | truncatewords:50 }}
+          <br>
+        </div>
+        <div class="front-post-footer">
+          <time>
+            Verfasst am {{ post.date | date: "%d.%m.%Y" }}
+          </time>
+          <a href="{{ post.url }}">
+            Weiterlesen...
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,45 @@
+.calendar-div
+  display: none
+  +flex(1)
+  height: 100%
+  min-width: 220px
+  max-width: 25%
+  background-color: $white
+  color: $zusatz
+  +add-border
+
+  +media($large-screen)
+    +display(inline)
+    margin-right: $card-margin
+
+  ul
+    margin: 0
+    margin-left: 5px
+    padding: 2% 5% 5% 5%
+    list-style-type: none
+
+    li
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+  h3
+    margin: 10px 0 5px 10px
+    font-size: 1.4em
+
+  h4
+    margin: 0
+    margin-bottom: 0.3em
+
+  p
+    margin: 0
+
+.calendar-header
+  margin-top: 5px
+  background-color: $zusatz
+  color: $white
+  padding: 2% 5% 2% 5%
+
+  h1
+    margin: 0
+    padding: 3.5% 0 2.5% 0
+    font-size: 1.8em

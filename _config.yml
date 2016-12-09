@@ -1,0 +1,24 @@
+### Seitenweite Variablen ###
+title: KjG Goldbach
+email: kjg-goldbach@gmx.de
+url: kjg-goldbach.de #TODO
+permalink: /:categories/:year/:month/:title/
+# Anzahl der News-Posts auf der Hauptseite
+frontpage-news: 3
+
+### Build Settings ###
+markdown: kramdown
+sass:
+    sass_dir: assets/css
+    style: nested
+
+### Collections ###
+collections:
+  calendar:
+
+### Plugins ###
+gems: [jekyll-paginate, jekyll-feed]
+
+### Pagination ###
+paginate: 5
+paginate_path: "/aktuelles/page:num/"

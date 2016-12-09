@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<div class="post-body">
+
+  {% include calendar.html %}
+
+  <article class="post-div">
+
+    <header>
+      {% if page.header_img != nil %}
+        <div class="post-header">
+          <img src="{{ page.header_img }}"></img>
+          <h1>
+            {{ page.title | escape }}
+          </h1>
+        </div>
+      {% endif %}
+    </header>
+
+    <div class="post-content">
+      {% if page.header_img == nil %}
+      <h1 class="post-title">
+        {{ page.title | escape }}
+      </h1>
+      {% endif %}
+      {{ content }}
+    </div>
+
+    <div class="post-footer">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        Verfasst am {{ page.date | date: "%d.%m.%Y" }}
+      </time>
+      <a href="/aktuelles">
+        Zurück...
+      </a>
+    </div>
+
+  </article>
+</div>

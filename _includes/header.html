@@ -1,0 +1,31 @@
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      <img src="/assets/img/wortmarke.svg" alt="Logo - Seelenbohrer">
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        <li class="nav-link">
+          <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Willkommen</a>
+        </li>
+        <li class="nav-link">
+          <a href="/aktuelles" {% if page.url == "/aktuelles/" %}class="active"{% endif %}>Aktuelles</a>
+        </li>
+        <li id="js-navigation-more" class="nav-link more">
+          <a href="javascript:void(0)" {% if page.url contains "/juggerturnier/" %}class="active"{% endif %}>Juggerturnier</a>
+          <ul class="submenu">
+            <li><a href="/juggerturnier">Was ist Jugger?</a></li>
+            <li><a href="/juggerturnier/regeln">Die Regeln im Detail</a></li>
+            <li><a href="/juggerturnier/turnier">Unser Turnier</a></li>
+            <li><a href="/juggerturnier/anmeldung">Anmeldung</a></li>
+          </ul>
+        </li>
+        <li class="nav-link">
+          <a href="/about" {% if page.url == "/about/" %}class="active"{% endif %}>Über Uns</a>
+        </li>
+      </ul>
+    </nav>
+    <img src="/assets/img/ecke.svg" class="corner-logo"></img>
+  </div>
+</header>

@@ -1,0 +1,50 @@
+.jugger-menu-div
+  +flex(1)
+  +align-self(flex-start)
+  margin-right: $card-margin
+  color: $zusatz
+
+  display: none
+  +media($large-screen)
+    display: block
+
+
+.active
+  background-color: $zusatz !important
+  color: $white !important
+
+.jugger-menu-gallery
+  +add-border
+  margin-bottom: 10px
+
+  img
+    margin-bottom: -10px
+
+.jugger-menu
+  +add-border
+
+  a
+    background-color: $white
+    text-decoration: none
+    display: block
+    color: inherit
+    font-size: 25px
+    font-weight: bold
+    padding: 5% 5% 3.5% 5%
+    //padding: 10px 15px 10px 15px
+
+    &:hover
+      background-color: $main
+      color: $white
+
+  ul
+    margin: 0
+    padding: 0
+
+  li
+    list-style: none
+
+  li ul a
+    font-weight: normal
+    font-size: 20px
+    //padding-left: 10%

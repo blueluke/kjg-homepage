@@ -1,0 +1,173 @@
+// CSS für /index.html  //
+
+// Hero mit Turnier-Ankündigung und Video
+.front-hero
+  +outer-container($outer-container-width)
+
+  .hero
+    +display(flex)
+    +flex-wrap(wrap)
+    max-width: $outer-container-width
+    min-height: 300px
+    margin-top: $card-margin
+
+  .hero-header
+    +display(flex)
+    flex: 1 100%
+    background-color: $white
+    color: $zusatz
+    text-decoration: none
+    +add-border
+
+    +media($large-screen)
+      +flex(1)
+      order: 5
+
+    img
+      align-self: center
+      flex: 1 auto
+      margin: 20px
+      margin-right: 10px
+      max-height: 250px
+
+  .hero-text
+    +display(flex)
+    +flex-wrap(wrap)
+
+    h1, h2, h3
+      text-align: center
+      margin: 0
+      flex: 1 100%
+
+    h1
+      font-size: 50px
+      font-weight: bold
+      margin-top: 30px
+
+      +media($large-screen)
+        margin-top: 20px
+        font-size: 45px
+        padding-right: 20px
+
+    h2
+      font-size: 40px
+      margin-bottom: 15px
+
+      +media($large-screen)
+        font-size: 35px
+
+    h4
+      font-size: 20px
+      text-align: center
+      margin-top: 0
+      margin-left: 3%
+      margin-right: 3%
+
+
+  .hero-video
+    flex: 1 100%
+    background-color: $black
+    margin-top: $card-margin/2
+    +add-border
+
+    +media($large-screen)
+      +flex(1.5)
+      margin-right: $card-margin
+      margin-top: 0
+
+
+.front-body
+  +display(flex)
+  +flex-wrap(wrap)
+  margin-top: $card-margin
+
+  .calendar-div
+    //Überschreibt den normalen margin des Kalenders
+    margin-right: 0 !important
+    max-width: none
+
+
+  .front-posts
+    +display(flex)
+    +flex-wrap(wrap)
+    +media($large-screen)
+      +flex(2)
+
+
+  .front-post
+    color: $zusatz
+    background-color: $white
+    +add-border
+    width: 100%
+    margin-bottom: $card-margin
+    &:last-child
+      margin-bottom: 0
+
+    .front-post-header
+      @extend .post-header
+
+    .front-post-content
+      @extend .post-content
+      h1:first-child
+        margin-top: 0
+
+    .front-post-footer
+      @extend .post-footer
+
+
+  .front-cards
+    +display(flex)
+    +flex-wrap(wrap)
+    +align-items(flex-start)
+    height: 100%
+    box-sizing: border-box
+
+    +media($large-screen)
+      +flex(1)
+      margin-right: 20px
+
+
+  .front-card
+    flex-basis: 15em
+    flex-grow: 1
+    background: $white
+    color: $zusatz
+    text-decoration: none
+    margin-bottom: 10px
+    +add-border
+
+    +media($large-screen)
+      margin: 0
+      margin-bottom: $card-margin
+      &:last-child
+        margin-bottom: 0px
+
+
+  .card-image
+    height: 150px
+    max-height: 150px
+    overflow: hidden
+
+    img
+      opacity: 1
+      transition: all 0.2s ease-in-out
+      width: 100%
+
+
+  .card-header
+    background: $zusatz
+    padding: 3.5% 0 2.5% 0
+    color: white
+    text-transform: uppercase
+    width: 100%
+
+    h3
+      font-size: 1.2em
+      line-height: 1.2
+      padding: 0 3.5%
+      margin: 0
+
+
+  .card-text
+    padding: 5% 5% 3% 5%
+    font-weight: normal

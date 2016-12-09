@@ -1,0 +1,55 @@
+.post-body
+  +outer-container($outer-container-width)
+  +display(flex)
+  +flex-wrap(wrap)
+  padding-top: $card-margin
+
+  h1
+    margin-top: 0
+
+
+.post-div
+  color: $zusatz
+  background-color: $white
+  height: 100%
+  +flex(3)
+  +add-border
+
+
+.post-header
+  img
+    display: block
+    width: 100%
+    max-height: 300px
+
+  h1
+    background-color: $zusatz
+    color: $white
+    padding: 2% 2.5% 1.5% 2.5%
+    margin: 0
+
+
+.post-content
+  padding: 20px 15px 0px 15px
+  +media($large-screen)
+    padding-left: 25px
+    padding-right: 25px
+
+  h2
+    margin-top: 5px
+    margin-bottom: 5px
+
+  img
+    width: 100%
+
+
+.post-footer
+  padding: 20px 15px 15px 15px
+
+  +media($large-screen)
+    padding-left: 25px
+    padding-right: 25px
+
+  time
+    color: transparentize($zusatz, 0.3)
+    float: right

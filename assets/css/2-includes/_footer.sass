@@ -1,0 +1,103 @@
+// Push sticky footer to the bottom
+.site
+  +display(flex)
+  min-height: 100vh
+  +flex-direction(column)
+
+.site-content
+  +flex(1)
+
+// Footer stuff
+.footer
+  $base-spacing: 1.5em !default
+  $action-color: #477DCA !default
+  $large-screen: 53.75em !default
+  //$footer-background: desaturate(darken($action-color, 20%), 30%)
+  $footer-background: $zusatz
+  $footer-color: white
+  $footer-link-color: transparentize($footer-color, 0.6)
+  $footer-disclaimer-color: transparentize($footer-color, 0.6)
+
+  background: $footer-background
+  display: inline-block
+  padding: $base-spacing
+  width: 100%
+  margin-top: 20px
+  box-shadow: $white 20px 0 0
+
+
+  .footer-logo
+    margin-bottom: 1em
+    margin-right: 1em
+    float: right
+
+    +media($large-screen)
+      float: left
+      margin-bottom: 0
+      display: none
+    img
+      width: 10vw
+      height: auto
+      opacity: 0.7
+
+
+  ul
+    line-height: 1.5em
+    margin: 0 0 1em 0
+    padding: 0
+
+    +media($large-screen)
+      float: left
+      line-height: 1.8em
+      margin-bottom: 0
+      margin-left: 1em
+
+  ul li
+    list-style: none
+    padding-right: 1em
+
+    +media($large-screen)
+      display: inline
+      text-align: left
+
+  ul li a
+    color: $footer-link-color
+    text-decoration: none
+
+    &:focus,
+    &:hover
+      color: transparentize($footer-color, 0)
+
+  .footer-secondary-links
+    +media($large-screen)
+      float: right
+
+
+    li
+      font-size: 0.8em
+
+    ul.footer-social
+      margin: 1em 0 0 0
+
+      +media($large-screen)
+        float: right
+        margin-top: 0
+
+      li
+        float: left
+        font-size: 1em
+        line-height: 0
+        margin: 0
+        padding-right: 0.7em
+
+        &:last-child
+          padding-right: 0
+
+      img
+        height: 1.6em
+        opacity: 0.7
+        padding: 1px
+
+        &:focus,
+        &:hover
+          opacity: 1

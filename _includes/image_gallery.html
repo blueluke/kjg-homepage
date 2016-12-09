@@ -1,0 +1,35 @@
+<!--
+  Erstellt Bilderslides
+  Parameter:
+    images:   "file1.png, file2.jpg"
+    path:     "/path/to/image/folder" (optional)
+    options:  unslider options (optional)
+    class:    zusätzliche class für <div> (optional)
+  Beispiel:  % include image_gallery.html images="gruppe.jpg, team.jpg" path="/assets/img" options="animateHeight: true, nav: false, autoplay: true" %
+-->
+
+{% if include.path != nil %}
+  {% capture imagePath %}{{ include.path }}{% endcapture %}
+{% else %}
+  {% capture imagePath %}/assets/posts/{{ page.date | date: "%Y-%m-%d" }}{% endcapture %}
+{% endif %}
+
+{% assign images = include.images | split: ", " %}
+
+<div class="{{ page.url | slugify }} {{ include.class }}">
+  <ul>
+    {% for image in images %}
+      <li>
+        <img src="{{ imagePath }}/{{ image }}" style="width: 100%"></img>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $('.{{ page.url | slugify }}').unslider({
+      {{ include.options }}
+    });
+  });
+</script>

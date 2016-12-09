@@ -1,0 +1,21 @@
+<!--
+  Bilder + Lightbox-Popup
+  Beispiel: % include image.html name="wegbeschreibung.jpg" %
+-->
+
+{% if include.path != nil %}
+  {% capture imagePath %}{{ include.path }}/{{ include.name }}{% endcapture %}
+{% else %}
+  {% capture imagePath %}/assets/posts/{{ page.date | date: "%Y-%m-%d" }}/{{ include.name }}{% endcapture %}
+{% endif %}
+
+<a id="{{ include.name | slugify }}" href="javascript:void(0)" data-mfp-src="{{ imagePath }}"><img src="{{ imagePath }}" {% if include.alt %} alt="{{ include.alt }}" {% endif %}/></a>
+
+<script>
+  $(document).ready(function() {
+    $('#{{ include.name | slugify }}').magnificPopup({
+      type: 'image'
+      // Other options - TBD
+    });
+  });
+</script>

@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+<div class="aktuelles-body">
+
+  {% include calendar.html %}
+
+  <div class="aktuelles-pages">
+    {% for post in paginator.posts %}
+      <div class="aktuelles-post">
+        {% if post.header_img != nil %}
+          <div class="aktuelles-header">
+            <img src="{{ post.header_img }}"></img>
+            <h1>
+              {{ post.title | escape }}
+            </h1>
+          </div>
+        {% endif %}
+        <div class="aktuelles-content">
+          {% if post.header_img == nil %}
+            <h1 class="aktuelles-title">
+              {{ post.title | escape }}
+            </h1>
+          {% endif %}
+          {{ post.content | truncatewords:50 }}
+        </div>
+
+        <div class="aktuelles-footer">
+          <time>
+            Verfasst am {{ post.date | date: "%d.%m.%Y" }}
+          </time>
+          <a href="{{ post.url }}">
+            Weiterlesen...
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+
+    <!-- Display Pagination links - If necessary -->
+    {% if paginator.total_pages > 1%}
+      <div class="aktuelles-pagination">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path }}" class="aktuelles-previous">< Vorherige</a>
+        {% else %}
+          <span class="aktuelles-previous">< Vorherige</span>
+        {% endif %}
+        <!-- <div>
+          {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+              <b>{{ page }}</b>
+            {% elsif page == 1 %}
+              <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+            {% else %}
+              <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+            {% endif %}
+          {% endfor %}
+        </div> -->
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path }}" class="aktuelles-next">Weiter ></a>
+        {% else %}
+          <span class="aktuelles-next">Weiter ></span>
+        {% endif %}
+      </div>
+    {% endif %}
+
+  </div>
+
+</div>
