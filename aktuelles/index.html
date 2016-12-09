@@ -11,7 +11,7 @@ layout: default
       <div class="aktuelles-post">
         {% if post.header_img != nil %}
           <div class="aktuelles-header">
-            <img src="{{ post.header_img }}"></img>
+            <img src="{{ site.github.url }}{{ post.header_img }}"></img>
             <h1>
               {{ post.title | escape }}
             </h1>
@@ -30,7 +30,7 @@ layout: default
           <time>
             Verfasst am {{ post.date | date: "%d.%m.%Y" }}
           </time>
-          <a href="{{ post.url }}">
+          <a href="{{ site.github.url }}{{ post.url }}">
             Weiterlesen...
           </a>
         </div>
