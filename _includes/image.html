@@ -4,9 +4,9 @@
 -->
 
 {% if include.path != nil %}
-  {% capture imagePath %}{{ include.path }}/{{ include.name }}{% endcapture %}
+  {% capture imagePath %}{{ site.github.url }}{{ include.path }}/{{ include.name }}{% endcapture %}
 {% else %}
-  {% capture imagePath %}/assets/posts/{{ page.date | date: "%Y-%m-%d" }}/{{ include.name }}{% endcapture %}
+  {% capture imagePath %}{{ site.github.url }}/assets/posts/{{ page.date | date: "%Y-%m-%d" }}/{{ include.name }}{% endcapture %}
 {% endif %}
 
 <a id="{{ include.name | slugify }}" href="javascript:void(0)" data-mfp-src="{{ imagePath }}"><img src="{{ imagePath }}" {% if include.alt %} alt="{{ include.alt }}" {% endif %}/></a>

@@ -10,7 +10,7 @@ layout: default
     <header>
       {% if page.header_img != nil %}
         <div class="post-header">
-          <img src="{{ page.header_img }}"></img>
+          <img src="{{ site.github.url }}{{ page.header_img }}"></img>
           <h1>
             {{ page.title | escape }}
           </h1>
@@ -31,7 +31,7 @@ layout: default
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         Verfasst am {{ page.date | date: "%d.%m.%Y" }}
       </time>
-      <a href="/aktuelles">
+      <a href="{{ site.github.url }}/aktuelles">
         Zurück...
       </a>
     </div>
