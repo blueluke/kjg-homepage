@@ -3,6 +3,12 @@ layout: default
 ---
 
 <div class="impressum-div">
+
+<div style="background-color: red; padding: 10px; margin-top: 20px; text-align: center; flex: 1;min-width: 100%">
+  <h2>Diese Webseite befindet sich noch im Aufbau! WIP</h2>
+  <h3>Alle Angaben dienen nur zu Testzwecken.</h3>
+</div>
+
 <div class="impressum-body" markdown="1">
 
 # Impressum
