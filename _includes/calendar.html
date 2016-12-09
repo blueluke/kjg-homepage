@@ -36,7 +36,7 @@
     {% endif %}
       <li>
         {% if post.link != nil %}
-        <h4><a href="{{ post.link }}">{{ post.name }}</a></h4>
+        <h4><a href="{{ site.github.url }}{{ post.link }}">{{ post.name }}</a></h4>
         {% else %}
         <h4>{{ post.name }}</h4>
         {% endif %}
