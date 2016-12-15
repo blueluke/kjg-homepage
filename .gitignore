@@ -6,3 +6,5 @@ _site/
 ## Fonts - Zur Sicherheit ##
 assets/fonts/
 
+## Sonstiges ##
+.todo
