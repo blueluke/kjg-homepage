@@ -1,12 +1,13 @@
 ### Seitenweite Variablen ###
 title: KjG Goldbach
 email: kjg-goldbach@gmx.de
-url: kjg-goldbach.de #TODO
+url: #TODO
 permalink: /:categories/:year/:month/:title/
 # Anzahl der News-Posts auf der Hauptseite
 frontpage-news: 3
 
 ### Build Settings ###
+exclude: [new_post.py, readme.md]
 markdown: kramdown
 sass:
     sass_dir: assets/css
