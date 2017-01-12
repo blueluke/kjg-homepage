@@ -3,8 +3,19 @@
 .about-body
   +outer-container($outer-container-width)
 
+  img
+    width: 100%
+    +add-border
 
-  .about-description, .about-aktionen
+    +media($large-screen)
+      +flex(1)
+      width: 20%
+      height: auto
+      margin-bottom: 0
+      &:first-child
+        margin-right: $card-margin
+
+  .about-description
     +display(flex)
     +flex-wrap(wrap)
     +justify-content(center)
@@ -12,15 +23,42 @@
     margin-top: $card-margin
     margin-bottom: $card-margin
 
+  .about-aktionen
+    @extend .about-description
+    +flex(3)
+
+  .about-img
+    +display(flex)
+    +flex-wrap(wrap)
+    +justify-content(center)
+    +align-items(flex-start)
+    +flex(1)
+
+    img
+      min-width: 200px
+
+      +media($large-screen)
+        margin-right: $card-margin
+        margin-top: $card-margin/2
+
+      &:first-child
+        margin-top: 0
+
+
+  .about-ziele
+    @extend .about-description
+    +align-items(stretch)
+
 
   .about-text
     +align-self(stretch)
     background-color: $white
     margin: 0
+    padding: 3px 0 15px 0
     +add-border
 
     +media($large-screen)
-      +flex(1.5)
+      +flex(2)
       &:first-child
         margin-right: $card-margin
 
@@ -34,21 +72,9 @@
       padding: 3.5% 0 2.5% 3.5%
 
     p
-      padding: 5% 5% 3% 5%
-      font-size: 20px
-
-
-  img
-    width: 100%
-    +add-border
-
-    +media($large-screen)
-      +flex(1)
-      width: 20%
-      height: auto
-      margin-bottom: 0
-      &:first-child
-        margin-right: $card-margin
+      font-size: 16px
+      padding-right: 4%
+      padding-left: 4%
 
 
   .about-aktionen img
@@ -56,29 +82,27 @@
       width: 50%
 
 
-  .about-gallery
-    margin-top: 10px
-    align-self: stretch
+.about-gallery
+  margin-top: 10px
+  align-self: stretch
 
-    +media($large-screen)
-      +flex(3)
-      margin-top: 0
+  +media($large-screen)
+    +flex(3)
+    margin-top: 0
 
-      &:first-child
-        margin-right: $card-margin
+    &:first-child
+      margin-right: $card-margin
 
-    img
-      +add-border
-      min-height: 200px
-      margin-bottom: -10px
+  img
+    +add-border
+    min-height: 200px
+    margin-bottom: -10px
 
 
 .about-map
   +display(flex)
   +flex-wrap(wrap)
-  //position: relative
   +flex(1)
-  //height: 200px
 
   //+media($large-screen)
     //height: 400px
@@ -92,6 +116,5 @@
   margin-top: $card-margin/2
 
   +media($large-screen)
-    margin-right: $card-margin
     margin-top: 0
     order: 0
