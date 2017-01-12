@@ -41,9 +41,9 @@
         <h4>{{ post.name }}</h4>
         {% endif %}
         {% if post.end_date != nil %}
-          <p>Vom {{ post.date | date: "%-d.%-m."}} bis {{ post.end_date | date: "%-d.%-m." }}</p>
+          <p>Vom {{ post.date | date: "%d.%m."}} bis {{ post.end_date | date: "%d.%m." }}</p>
         {% else %}
-          <p>Am {{ post.date | date: "%-d."}}
+          <p>Am {{ post.date | date: "%d."}}
           {% assign m = post.date | date: "%-m" %}
           {% case m %}
             {% when '1' %}Januar
