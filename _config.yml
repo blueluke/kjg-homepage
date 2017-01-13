@@ -1,17 +1,23 @@
 ### Seitenweite Variablen ###
 title: KjG Goldbach
 email: kjg-goldbach@gmx.de
-url: #TODO
+url: http://kjg-goldbach.de/preview
 permalink: /:categories/:year/:month/:title/
 # Anzahl der News-Posts auf der Hauptseite
 frontpage-news: 3
 
 ### Build Settings ###
-exclude: [new_post.py, readme.md]
+exclude: [new_post.py, readme.md, assets/fonts]
 markdown: kramdown
 sass:
     sass_dir: assets/css
     style: nested
+atom:
+  buildCommand:
+    - /home/luke/.gem/ruby/2.3.0/bin/jekyll
+    - build
+    - --config
+    - _config.yml,_config-dev.yml
 
 ### Collections ###
 collections:

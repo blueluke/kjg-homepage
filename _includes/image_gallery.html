@@ -9,9 +9,9 @@
 -->
 
 {% if include.path != nil %}
-  {% capture imagePath %}{{ site.github.url }}{{ include.path }}{% endcapture %}
+  {% capture imagePath %}{{ site.url }}{{ include.path }}{% endcapture %}
 {% else %}
-  {% capture imagePath %}{{ site.github.url }}/assets/posts/{{ page.date | date: "%Y-%m-%d" }}{% endcapture %}
+  {% capture imagePath %}{{ site.url }}/assets/posts/{{ page.date | date: "%Y-%m-%d" }}{% endcapture %}
 {% endif %}
 
 {% assign images = include.images | split: ", " %}

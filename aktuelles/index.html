@@ -11,7 +11,7 @@ layout: default
       <div class="aktuelles-post">
         {% if post.header_img != nil %}
           <div class="aktuelles-header">
-            <img src="{{ site.github.url }}{{ post.header_img }}"></img>
+            <img src="{{ site.url }}{{ post.header_img }}"></img>
             <h1>
               {{ post.title | escape }}
             </h1>
@@ -30,7 +30,7 @@ layout: default
           <time>
             Verfasst am {{ post.date | date: "%d.%m.%Y" }}
           </time>
-          <a href="{{ site.github.url }}{{ post.url }}">
+          <a href="{{ site.url }}{{ post.url }}">
             Weiterlesen...
           </a>
         </div>
@@ -41,7 +41,7 @@ layout: default
     {% if paginator.total_pages > 1%}
       <div class="aktuelles-pagination">
         {% if paginator.previous_page %}
-          <a href="{{ site.github.url }}{{ paginator.previous_page_path }}" class="aktuelles-previous">< Vorherige</a>
+          <a href="{{ site.url }}{{ paginator.previous_page_path }}" class="aktuelles-previous">< Vorherige</a>
         {% else %}
           <span class="aktuelles-previous">< Vorherige</span>
         {% endif %}
@@ -57,7 +57,7 @@ layout: default
           {% endfor %}
         </div> -->
         {% if paginator.next_page %}
-          <a href="{{ site.github.url }}{{ paginator.next_page_path }}" class="aktuelles-next">Weiter ></a>
+          <a href="{{ site.url }}{{ paginator.next_page_path }}" class="aktuelles-next">Weiter ></a>
         {% else %}
           <span class="aktuelles-next">Weiter ></span>
         {% endif %}
