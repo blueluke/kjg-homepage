@@ -29,6 +29,7 @@
       margin: 20px
       margin-right: 5px
       max-height: 250px
+      max-width: 60px
 
   .hero-text
     +display(flex)
@@ -79,12 +80,16 @@
 .front-body
   +display(flex)
   +flex-wrap(wrap)
+  +outer-container($outer-container-width)
+  +flex(1)
   margin-top: $card-margin
 
   .calendar-div
     //Überschreibt den normalen margin des Kalenders
     margin-right: 0 !important
     max-width: none
+    +media($large-screen)
+      +flex(1 0 auto)
 
 
   .front-posts
@@ -123,7 +128,7 @@
     box-sizing: border-box
 
     +media($large-screen)
-      +flex(1)
+      +flex(1 0 0px)
       margin-right: 20px
 
 

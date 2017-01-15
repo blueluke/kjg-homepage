@@ -24,6 +24,7 @@ layout: default
       <div class="youtube-player" data-id="4FUxKwKryz8"></div>
     </div>
   </div>
+</div>
 
 <div class="front-body">
   <div class="front-cards">
@@ -70,8 +71,8 @@ layout: default
               {{ post.title | escape }}
             </h1>
           {% endif %}
-          {{ post.content | truncatewords:50 }}
-          <br>
+          {{ post.excerpt }}
+          <br/>
         </div>
         <div class="front-post-footer">
           <time>
