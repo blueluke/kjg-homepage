@@ -14,7 +14,7 @@ sass:
     style: nested
 atom:
   buildCommand:
-    - /home/luke/.gem/ruby/2.3.0/bin/jekyll
+    - /home/luke/.gem/ruby/2.4.0/bin/jekyll
     - build
     - --config
     - _config.yml,_config-dev.yml
@@ -22,6 +22,16 @@ atom:
 ### Collections ###
 collections:
   calendar:
+
+### Defaults ###
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      excerpt_separator: <!--more-->
+      category: aktuelles
 
 ### Plugins ###
 gems: [jekyll-paginate, jekyll-feed]
