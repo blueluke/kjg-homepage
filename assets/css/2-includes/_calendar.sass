@@ -1,9 +1,9 @@
-.calendar-div
+.calendar-main
   display: none
   +flex(1)
   +align-self(flex-start)
   min-width: 220px
-  max-width: 25%
+  max-width: 30%
   background-color: $white
   color: $zusatz
   +add-border
@@ -14,28 +14,37 @@
 
   ul
     margin: 0
-    margin-left: 5px
-    padding: 2% 5% 5% 5%
+    padding: 0
     list-style-type: none
 
-    li
-      margin-bottom: 10px
-      &:last-child
-        margin-bottom: 0
+  li
+    padding: 4% 5% 4% 5%
+    &:nth-child(even)
+      background-color: transparentize($zusatz, 0.9)
+
   h3
-    margin: 10px 0 5px 10px
-    font-size: 1.4em
+    margin: 0
+    padding: 3% 4% 3% 4%
+    font-size: 1.5em
+    background-color: $zusatz
+    color: $white
+
+    .calendar-month-year
+      float: right
+      //color: transparentize(white, 0.3)
 
   h4
     margin: 0
-    margin-bottom: 0.3em
+    margin-bottom: 0.2em
+    font-size: 1.3em
 
   p
     margin: 0
 
+
 .calendar-header
   margin-top: 5px
-  background-color: $zusatz
+  background-color: $main
   color: $white
   padding: 2% 5% 2% 5%
 
@@ -43,3 +52,20 @@
     margin: 0
     padding: 3.5% 0 2.5% 0
     font-size: 1.8em
+
+
+.calendar-feeds
+  p
+    font-size: 1em
+    padding: 4% 5% 4% 6%
+
+  .calendar-feeds-header
+    background-color: $main
+
+    img
+      width: 16%
+      float: left
+      padding: 8px 10px 5px 0px
+
+    h3
+      background-color: $main

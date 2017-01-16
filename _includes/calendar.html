@@ -1,7 +1,7 @@
-<div class="calendar-div">
-  <div class="calendar-header">
+<div class="calendar-main">
+  <!-- <div class="calendar-header">
     <h1>KjG-Kalender</h1>
-  </div>
+  </div> -->
   {% assign nowunix = site.time | date: '%s' %}
   {% assign counter = 1 %}
   {% for post in site.calendar %}
@@ -11,39 +11,10 @@
       {% continue %}
     {% endif %}
     {% if currentdate != date %}
-      {% unless counter == 1 %}</ul><hr>{% endunless %}
+      {% unless counter == 1 %}</ul>{% endunless %}
       {% assign counter = counter | plus: 1 %}
       <h3 id="y{{post.date | date: "%Y"}}">
-        {% assign m = post.date | date: "%-m" %}
-        {% case m %}
-          {% when '1' %}Januar
-          {% when '2' %}Februar
-          {% when '3' %}März
-          {% when '4' %}April
-          {% when '5' %}Mai
-          {% when '6' %}Juni
-          {% when '7' %}Juli
-          {% when '8' %}August
-          {% when '9' %}September
-          {% when '10' %}Oktober
-          {% when '11' %}November
-          {% when '12' %}Dezember
-        {% endcase %}
-        {{ post.date | date: "%Y"}}
-      </h3>
-      <ul>
-      {% assign date = currentdate %}
-    {% endif %}
-      <li>
-        {% if post.link != nil %}
-        <h4><a href="{{ site.url }}{{ post.link }}">{{ post.name }}</a></h4>
-        {% else %}
-        <h4>{{ post.name }}</h4>
-        {% endif %}
-        {% if post.end_date != nil %}
-          <p>Vom {{ post.date | date: "%d.%m."}} bis {{ post.end_date | date: "%d.%m." }}</p>
-        {% else %}
-          <p>Am {{ post.date | date: "%d."}}
+        <span class="calendar-month">
           {% assign m = post.date | date: "%-m" %}
           {% case m %}
             {% when '1' %}Januar
@@ -59,10 +30,60 @@
             {% when '11' %}November
             {% when '12' %}Dezember
           {% endcase %}
+        </span>
+        <span class="calendar-month-year">
+          {{ post.date | date: "%Y"}}
+        </span>
+      </h3>
+      <ul>
+      {% assign date = currentdate %}
+    {% endif %}
+      <li>
+        {% if post.link != nil %}
+        <h4><a href="{{ site.url }}{{ post.link }}">{{ post.name }}</a></h4>
+        {% else %}
+        <h4>{{ post.name }}</h4>
+        {% endif %}
+        {% if post.end_date != nil %}
+          <p>Vom {{ post.date | date: "%d.%m."}} bis {{ post.end_date | date: "%d.%m." }}</p>
+        {% else %}
+          <p class="calendar-date">Am {{ post.date | date: "%d."}}
+          {% assign m = post.date | date: "%-m" %}
+          {% case m %}
+            {% when '1' %}Januar
+            {% when '2' %}Februar
+            {% when '3' %}März
+            {% when '4' %}April
+            {% when '5' %}Mai
+            {% when '6' %}Juni
+            {% when '7' %}Juli
+            {% when '8' %}August
+            {% when '9' %}September
+            {% when '10' %}Oktober
+            {% when '11' %}November
+            {% when '12' %}Dezember
+          {% endcase %}
+          {{ post.date | date: "%Y"}}
           </p>
         {% endif %}
         <p> {{ post.short }} </p>
       </li>
     {% if forloop.last %}</ul>{% endif %}
   {% endfor %}
+
+  {% if page.url contains "/aktuelles/" %}
+    <div class="calendar-feeds">
+      <div class="calendar-feeds-header">
+        <img src="{{ site.url }}/assets/img/pfeil.svg"></img>
+        <h3>Feeds abbonieren</h3>
+      </div>
+      <p>
+        Den KjG-Kalender gibt es auch als <a href="{{ site.url }}/feed/events.ics">ical-Feed</a>
+        zum Abbonieren mit eurem Smartphone.
+      </p>
+      <p>
+        Für aktuelle Neuigkeiten rund um die KjG gibt es außerdem einen <a href="{{ site.url }}/feed/atom.xml">RSS-Feed.</a>
+      </p>
+    </div>
+  {% endif %}
 </div>
