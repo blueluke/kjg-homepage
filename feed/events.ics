@@ -15,5 +15,13 @@ DTSTART;VALUE=DATE:{{ event.date | date: "%Y%m%d" }}{% if event.end_date != nil 
 DTEND;VALUE=DATE:{{ event.end_date | date: "%s" | plus: 86400 | date: "%Y%m%d" }}{% endif %}{% endif %}
 SUMMARY:{{ event.name }}
 DESCRIPTION:{% if event.short != nil %}{{ event.short }}\n{% endif %}{% if event.link != nil %}Mehr Infos unter {{ site.url }}{{ event.link }}{% endif %}
-END:VEVENT{% endif %}{% endfor %}
+END:VEVENT{% endif %}{% endfor %}{% for gs in site.gruppenstunden %}{% for day in gs.days %}
+BEGIN:VEVENT
+UID:{{ gs.timestamp | date: "%Y%m%dT%H%M" }}{{ forloop.index }}@kjg-goldbach.de
+DTSTAMP:{{ gs.timestamp | date: "%Y%m%dT%H%M" }}00Z
+DTSTART;TZID=Europe/Berlin:{{ gs.year }}{{ gs.month | prepend: '0' | slice: -2, 2 }}{{ day | prepend: '0' | slice: -2, 2 }}T160000
+DTEND;TZID=Europe/Berlin:{{ gs.year }}{{ gs.month | prepend: '0' | slice: -2, 2 }}{{ day | prepend: '0' | slice: -2, 2 }}T170000
+SUMMARY:KjG Gruppenstunde
+DESCRIPTION:Gruppenstunde von 16:00h bis 17:00h.
+END:VEVENT{% endfor %}{% endfor %}
 END:VCALENDAR

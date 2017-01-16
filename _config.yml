@@ -24,6 +24,7 @@ atom:
 ### Collections ###
 collections:
   calendar:
+  gruppenstunden:
 
 ### Defaults ###
 defaults:
