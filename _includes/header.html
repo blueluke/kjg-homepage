@@ -7,22 +7,22 @@
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
         <li class="nav-link">
-          <a href="{{ site.url }}/" {% if page.url == "{{ site.url }}/" %}class="active"{% endif %}>Willkommen</a>
+          <a href="{{ site.url }}" {% if page.url == "/" %}class="active"{% endif %}>Willkommen</a>
         </li>
         <li class="nav-link">
-          <a href="{{ site.url }}/aktuelles" {% if page.url == "{{ site.url }}/aktuelles/" %}class="active"{% endif %}>Aktuelles</a>
+          <a href="{{ site.url }}/aktuelles/" {% if page.url contains "/aktuelles/" %}class="active"{% endif %}>Aktuelles</a>
         </li>
         <li id="js-navigation-more" class="nav-link more">
-          <a href="javascript:void(0)" {% if page.url contains "/juggerturnier/" %}class="active"{% endif %}>Juggerturnier</a>
+          <a href="javascript:void(0)" {% if page.url contains "/juggerturnier" %}class="active"{% endif %}>Juggerturnier</a>
           <ul class="submenu">
-            <li><a href="{{ site.url }}/juggerturnier">Was ist Jugger?</a></li>
-            <li><a href="{{ site.url }}/juggerturnier/regeln">Die Regeln im Detail</a></li>
-            <li><a href="{{ site.url }}/juggerturnier/turnier">Unser Turnier</a></li>
-            <li><a href="{{ site.url }}/juggerturnier/anmeldung">Anmeldung</a></li>
+            <li><a href="{{ site.url }}/juggerturnier/">Was ist Jugger?</a></li>
+            <li><a href="{{ site.url }}/juggerturnier/regeln/">Die Regeln im Detail</a></li>
+            <li><a href="{{ site.url }}/juggerturnier/turnier/">Unser Turnier</a></li>
+            <li><a href="{{ site.url }}/juggerturnier/anmeldung/">Anmeldung</a></li>
           </ul>
         </li>
         <li class="nav-link">
-          <a href="{{ site.url }}/about" {% if page.url == "{{ site.url }}/about/" %}class="active"{% endif %}>Über Uns</a>
+          <a href="{{ site.url }}/about/" {% if page.url == "/about/" %}class="active"{% endif %}>Über Uns</a>
         </li>
       </ul>
     </nav>
