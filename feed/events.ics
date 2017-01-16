@@ -5,7 +5,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//http://kjg-goldbach.de//
 X-WR-CALNAME:KjG Goldbach
-X-WR-TIMEZONE:Europe/Berlin{% for event in site.calendar %}
+X-WR-TIMEZONE:Europe/Berlin{% for event in site.calendar %}{% if event.no_feed == nil %}
 BEGIN:VEVENT
 UID:{{ event.timestamp | date: "%Y%m%dT%H%M%S" }}@kjg-goldbach.de
 DTSTAMP:{{ event.timestamp | date: "%Y%m%dT%H%M" }}00Z{% if event.time != nil %}
@@ -15,5 +15,5 @@ DTSTART;VALUE=DATE:{{ event.date | date: "%Y%m%d" }}{% if event.end_date != nil 
 DTEND;VALUE=DATE:{{ event.end_date | date: "%s" | plus: 86400 | date: "%Y%m%d" }}{% endif %}{% endif %}
 SUMMARY:{{ event.name }}
 DESCRIPTION:{% if event.short != nil %}{{ event.short }}\n{% endif %}{% if event.link != nil %}Mehr Infos unter {{ site.url }}{{ event.link }}{% endif %}
-END:VEVENT{% endfor %}
+END:VEVENT{% endif %}{% endfor %}
 END:VCALENDAR
