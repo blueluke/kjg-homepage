@@ -2,6 +2,8 @@
 title: KjG Goldbach
 email: kjg-goldbach@gmx.de
 url: http://kjg-goldbach.de/preview
+author: KjG Goldbach
+description: #TODO
 permalink: /:categories/:year/:month/:title/
 # Anzahl der News-Posts auf der Hauptseite
 frontpage-news: 3
@@ -39,3 +41,7 @@ gems: [jekyll-paginate, jekyll-feed]
 ### Pagination ###
 paginate: 5
 paginate_path: "/aktuelles/page:num/"
+
+### Feed Settings ###
+feed:
+  path: feed/atom.xml
