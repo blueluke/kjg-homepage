@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Neuigkeiten - KjG Goldbach
 ---
 
 <div class="aktuelles-body">
@@ -23,7 +24,7 @@ layout: default
               {{ post.title | escape }}
             </h1>
           {% endif %}
-          {{ post.content | truncatewords:50 }}
+          {{ post.excerpt }}
         </div>
 
         <div class="aktuelles-footer">
