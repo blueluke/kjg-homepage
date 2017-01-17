@@ -1,3 +1,6 @@
+---
+---
+
 $(window).resize(function() {
   var more = document.getElementById("js-navigation-more");
   if ($(more).length > 0) {
@@ -34,6 +37,15 @@ $(document).ready(function() {
   // Responsive YT embed mit Fitvids.js
   $(".hero-video").fitVids();
   $(".jugger-intro-video-wrapper").fitVids();
+
+  // Anpassen der "Zurück...""-Links von posts
+  $(".post-back").attr('href', function(){
+    var link = "{{ site.url }}/aktuelles/" // Fallback
+    if(document.referrer.includes("/aktuelles/") || document.referrer == "{{ site.url }}/") {
+      link = document.referrer;
+    }
+    return link;
+  });
 });
 
 
