@@ -133,7 +133,7 @@
 
 
   .front-card
-    flex-basis: 15em
+    //flex-basis: 15em
     flex-grow: 1
     background: $white
     color: $zusatz
@@ -142,6 +142,7 @@
     +add-border
 
     +media($large-screen)
+      flex-basis: 100%
       margin: 0
       margin-bottom: $card-margin
       &:last-child
@@ -149,8 +150,8 @@
 
 
   .card-image
-    height: 150px
-    max-height: 150px
+    height: 200px
+    max-height: 200px
     overflow: hidden
 
     img
