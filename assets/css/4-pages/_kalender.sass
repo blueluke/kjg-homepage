@@ -1,0 +1,16 @@
+// CSS für /aktuelles/kalender/
+
+.calendar-solo
+  +outer-container($outer-container-width)
+  +display(flex)
+  margin-top: $card-margin
+
+  .calendar-main
+    //Überschreibt CSS des "normalen" Kalenders
+    margin-right: 0 !important
+    max-width: none
+    display: inline
+
+    h3
+      font-size: 2em
+      padding: 2% 3% 2% 3%

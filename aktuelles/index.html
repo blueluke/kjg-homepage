@@ -5,7 +5,17 @@ title: Neuigkeiten - KjG Goldbach
 
 <div class="aktuelles-body">
 
-  {% include calendar.html %}
+  <div class="aktuelles-kalender">
+    {% include calendar.html %}
+    {% include subscribe.html %}
+  </div>
+  <a class="aktuelles-link" href="{{ site.url }}/aktuelles/kalender/">
+    <img src="{{ site.url }}/assets/img/pfeil.svg"></img>
+    <div class="aktuelles-link-text">
+      <h1>KjG-Kalender</h1>
+      <h3>Klick mich!</h3>
+    </div>
+  </a>
 
   <div class="aktuelles-pages">
     {% for post in paginator.posts %}
