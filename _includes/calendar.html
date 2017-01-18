@@ -70,20 +70,4 @@
       </li>
     {% if forloop.last %}</ul>{% endif %}
   {% endfor %}
-
-  {% if page.url contains "/aktuelles/" %}
-    <div class="calendar-feeds">
-      <div class="calendar-feeds-header">
-        <img src="{{ site.url }}/assets/img/pfeil.svg"></img>
-        <h3>Feeds abbonieren</h3>
-      </div>
-      <p>
-        Den KjG-Kalender gibt es auch als <a href="{{ site.url }}/feed/events.ics">ical-Feed</a>
-        zum Abonnieren mit eurem Smartphone.
-      </p>
-      <p>
-        Für aktuelle Neuigkeiten rund um die KjG gibt es außerdem einen <a href="{{ site.url }}/feed/atom.xml">RSS-Feed.</a>
-      </p>
-    </div>
-  {% endif %}
 </div>
