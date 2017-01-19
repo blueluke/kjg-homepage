@@ -1,2 +1,4 @@
-# Überschreibt url für Nutzung in Atom
+# Überschreibt url für lokale Nutzung mit Atom Jekyll-Plugin
 url: http://localhost:4000
+sass:
+    style: nested

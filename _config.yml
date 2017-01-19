@@ -13,7 +13,7 @@ exclude: [new_post.py, readme.md, assets/fonts]
 markdown: kramdown
 sass:
     sass_dir: assets/css
-    style: nested
+    style: compressed
 atom:
   buildCommand:
     - /home/luke/.gem/ruby/2.4.0/bin/jekyll
