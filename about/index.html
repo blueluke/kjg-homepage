@@ -8,11 +8,11 @@ layout: default
 
   <div class="about-description">
     <div class="about-img">
-      <img id="menschenbohrer" src="{{ site.url }}/assets/img/kjg-menschenbohrer.jpg">
+      <img id="menschenbohrer" src="{{ site.url }}/assets/img/about/kjg-menschenbohrer.jpg">
       <img src="{{ site.url }}/assets/img/kjg-leiter.jpg">
     </div>
     <div class="about-text">
-      <h3>Wer sind wir?</h3>
+      <h3 class="about-header">Wer sind wir?</h3>
       <div>
       <p>
         Wir sind die Katholische junge Gemeinde (KjG) aus Goldbach - <br/>
@@ -39,30 +39,43 @@ layout: default
         Judith und Ronja Wünn, Jonas Bernhardt, Sebastian Braun und Steffen Pohl.<br/>
         Erreichen kann man uns unter <a href="mailto:kjg-goldbach@gmx.de">kjg-goldbach@gmx.de</a> oder in der Gruppenstunde.
       </p>
-
       </div>
     </div>
   </div>
 
-  <div class="about-aktionen">
-    <div class="about-text">
-      <h3>Unsere Aktionen</h3>
-      <div>
-        <p>Gruppenstunden, Zeltlager und so en Zeug halt...</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Vestibulum mollis velit non gravida venenatis.
-        Praesent consequat lectus purus, ut scelerisque velit condimentum eu.</p>
-      </div>
-    </div>
-    <div class="about-gallery">
-      {% include image_gallery.html images="gruppe.jpg, jugg.jpg" path="/assets/img" options="animateHeight: true, nav: false" %}
+  <div class="about-aktionen" id="about-aktionen">
+    <!-- <h3 class="about-header">Unsere Aktionen</h3> -->
+    <div class="about-aktionen-body">
+      <ul>
+        <li>
+          <img src="{{ site.url }}/assets/img/gruppe.jpg"></img>
+          <div class="about-aktionen-text">
+            <h3 class="about-header">Gruppenstunde</h3>
+            <p>
+              blabla
+            </p>
+          </div>
+        </li>
+        <li>
+          <img src="{{ site.url }}/assets/img/about/zeltlager-gruppenfoto.jpg"></img>
+          <div class="about-aktionen-text">
+            <h3 class="about-header">Zeltlager</h3>
+            <p>
+              Das Higlight unseres KjG-Jahres... Epische Erlebnisse... Rharbarber...
+            </p>
+            <p>
+              Zeltlager blabla
+            </p>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 
   <div class="about-ziele">
-    <img src="{{ site.url }}/assets/img/thomas_morus.jpg">
+    <img src="{{ site.url }}/assets/img/about/thomas_morus.jpg">
     <div class="about-text">
-      <h3>Wofür stehen wir?</h3>
+      <h3 class="about-header">Wofür stehen wir?</h3>
       <div>
         <p><b>„Nie hätte ich daran gedacht, einer Sache zuzustimmen, die gegen mein Gewissen wäre.“</b>
           &emsp; Thomas Morus - Schutzpatron der KjG.
@@ -89,7 +102,7 @@ layout: default
 
   <div class="about-map" id="hoim">
     <div class="about-text">
-      <h3>Das KjG-Hoim</h3>
+      <h3 class="about-header">Das KjG-Hoim</h3>
       <div>
         <p>Oh eine Schatzkarte!</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -101,15 +114,3 @@ layout: default
   </div>
 
 </div>
-
-<script>
-// var mymap = L.map('aboutmap', { scrollWheelZoom:false }).setView([50.00526,9.17458], 15);
-//
-//     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-//     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-//   }).addTo(mymap);
-//
-//   mymap.on('resize', function () {
-//       mymap.invalidateSize();
-//   });
-</script>

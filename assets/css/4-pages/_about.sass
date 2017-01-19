@@ -3,17 +3,15 @@
 .about-body
   +outer-container($outer-container-width)
 
-  img
-    width: 100%
-    +add-border
+  .about-header
+    margin: 0
+    text-transform: uppercase
+    background-color: $zusatz
+    color: $white
+    font-size: 1.8em
+    line-height: 1.2
+    padding: 15px 25px 15px 25px
 
-    +media($large-screen)
-      +flex(1)
-      width: 20%
-      height: auto
-      margin-bottom: 0
-      &:first-child
-        margin-right: $card-margin
 
   .about-description
     +display(flex)
@@ -27,6 +25,36 @@
     @extend .about-description
     +flex(3)
 
+    .about-aktionen-body
+      li
+        +display(flex)
+        +flex-wrap(wrap)
+
+      .about-aktionen-text
+        +flex(1)
+        background-color: $white
+        color: $zusatz
+        +add-border
+
+        h4
+          margin: 0
+          font-size: 1.5em
+        p
+          padding: 15px 15px 10px 25px
+          font-size: 1.1em
+
+      img
+        +flex(2)
+        width: 100%
+        height: auto
+        max-height: 400px
+        +add-border
+
+        +media($large-screen)
+          width: 20%
+          margin-right: $card-margin
+
+
   .about-img
     +display(flex)
     +flex-wrap(wrap)
@@ -36,13 +64,21 @@
 
     img
       min-width: 200px
-
-      +media($large-screen)
-        margin-right: $card-margin
-        margin-top: $card-margin/2
-
+      width: 100%
+      +add-border
       &:first-child
         margin-top: 0
+
+      +media($large-screen)
+        +flex(1)
+        width: 20%
+        height: auto
+        margin-bottom: 0
+        margin-right: $card-margin
+        margin-top: $card-margin/2
+        &:first-child
+          margin-right: $card-margin
+
 
   #menschenbohrer
     display: none
@@ -54,12 +90,27 @@
     @extend .about-description
     +align-items(stretch)
 
+    img
+      width: 100%
+      display: none
+      +add-border
+
+      +media($large-screen)
+        display: inline
+        +flex(1)
+        width: 20%
+        height: auto
+        margin-bottom: 0
+        &:first-child
+          margin-right: $card-margin
+
 
   .about-text
     +align-self(stretch)
     background-color: $white
+    color: $zusatz
     margin: 0
-    padding: 3px 0 15px 0
+    //padding: 3px 0 15px 0
     +add-border
 
     +media($large-screen)
@@ -67,41 +118,10 @@
       &:first-child
         margin-right: $card-margin
 
-    h3
-      margin: 5px 0 0 0
-      text-transform: uppercase
-      background-color: $zusatz
-      color: $white
-      font-size: 1.8em
-      line-height: 1.2
-      padding: 3.5% 0 2.5% 3.5%
-
     p
       font-size: 16px
       padding-right: 4%
       padding-left: 4%
-
-
-  .about-aktionen img
-    +media($large-screen)
-      width: 50%
-
-
-.about-gallery
-  margin-top: 10px
-  align-self: stretch
-
-  +media($large-screen)
-    +flex(3)
-    margin-top: 0
-
-    &:first-child
-      margin-right: $card-margin
-
-  img
-    +add-border
-    min-height: 200px
-    margin-bottom: -10px
 
 
 .about-map
