@@ -46,4 +46,5 @@ paginate_path: "/aktuelles/page:num/"
 
 ### Feed Settings ###
 feed:
-  path: feed/atom.xml
+  path: aktuelles/atom.xml
+calfeed_path: aktuelles/events.ics
