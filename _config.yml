@@ -9,7 +9,8 @@ permalink: /:categories/:year/:month/:title/
 frontpage-news: 3
 
 ### Build Settings ###
-exclude: [new_post.py, readme.md, assets/fonts]
+exclude: [new_post.py, readme.md, assets/fonts, Rakefile, Gemfile]
+include: [.htaccess]
 markdown: kramdown
 sass:
     sass_dir: assets/css
