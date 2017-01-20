@@ -46,17 +46,6 @@ $(document).ready(function() {
     }
     return link;
   });
-
-  // Unslider der /about/ Seite
-  $('.about-aktionen-body').unslider({
-    speed: 500,
-    delay: 6000,
-    keys: true,
-    fluid: true,
-    nav: false,
-    animateHeight: true,
-    infinite: true
-  });
 });
 
 
