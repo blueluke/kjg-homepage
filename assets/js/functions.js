@@ -1,6 +1,11 @@
 ---
 ---
+// Main JS file - Include all others (except jQuery)
+{% include_relative _jquery.popup.js %};
+{% include_relative _jquery.unslider.js %};
+{% include_relative _jquery.fitvids.js %};
 
+// Nav-Menu Teil 1
 $(window).resize(function() {
   var more = document.getElementById("js-navigation-more");
   if ($(more).length > 0) {
