@@ -51,27 +51,22 @@ title: Neuigkeiten - KjG Goldbach
     <!-- Display Pagination links - If necessary -->
     {% if paginator.total_pages > 1%}
       <div class="aktuelles-pagination">
-        {% if paginator.previous_page %}
-          <a href="{{ site.url }}{{ paginator.previous_page_path }}" class="aktuelles-previous">< Vorherige</a>
+        {% if paginator.previous_page == nil %}
+          <a href="{{ site.url }}{{ paginator.next_page_path }}" class="aktuelles-previous"><b>Mehr News...</b></a>
         {% else %}
-          <span class="aktuelles-previous">< Vorherige</span>
+          {% if paginator.previous_page %}
+            <a href="{{ site.url }}{{ paginator.previous_page_path }}" class="aktuelles-previous">< &nbsp;&nbsp</a>
+          {% else %}
+            <span class="aktuelles-previous">< &nbsp;&nbsp</span>
+          {% endif %}
+          <b>Seite {{ paginator.page }}</b>
+          {% if paginator.next_page %}
+            <a href="{{ site.url }}{{ paginator.next_page_path }}" class="aktuelles-next">&nbsp;&nbsp ></a>
+          {% else %}
+            <span class="aktuelles-next">&nbsp;&nbsp ></span>
+          {% endif %}
         {% endif %}
-        <!-- <div>
-          {% for page in (1..paginator.total_pages) %}
-            {% if page == paginator.page %}
-              <b>{{ page }}</b>
-            {% elsif page == 1 %}
-              <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-            {% else %}
-              <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-            {% endif %}
-          {% endfor %}
-        </div> -->
-        {% if paginator.next_page %}
-          <a href="{{ site.url }}{{ paginator.next_page_path }}" class="aktuelles-next">Weiter ></a>
-        {% else %}
-          <span class="aktuelles-next">Weiter ></span>
-        {% endif %}
+
       </div>
     {% endif %}
 
