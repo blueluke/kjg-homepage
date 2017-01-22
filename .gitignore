@@ -8,3 +8,6 @@ assets/fonts/
 
 ## Sonstiges ##
 .todo
+.last_optimized
+Gemfile.lock
+Rakefile
