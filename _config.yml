@@ -9,7 +9,7 @@ permalink: /:categories/:year/:month/:title/
 frontpage-news: 3
 
 ### Build Settings ###
-exclude: [new_post.py, readme.md, assets/fonts, Rakefile, Gemfile]
+exclude: [new_post.py, readme.md, assets/fonts, Rakefile, Gemfile, Gemfile.lock]
 include: [.htaccess]
 markdown: kramdown
 sass:
@@ -17,7 +17,9 @@ sass:
     style: compressed
 atom:
   buildCommand:
-    - /home/luke/.gem/ruby/2.4.0/bin/jekyll
+    - /home/luke/.gem/ruby/2.4.0/bin/bundle
+    - exec
+    - jekyll
     - build
     - --config
     - _config.yml,_config-dev.yml
