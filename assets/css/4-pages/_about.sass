@@ -29,6 +29,7 @@
       li
         +display(flex)
         +flex-wrap(wrap)
+        height: 400px
 
       .about-aktionen-text
         +flex(1)
@@ -40,19 +41,22 @@
           margin: 0
           font-size: 1.5em
         p
+          margin: 0
           padding: 15px 15px 10px 25px
           font-size: 1.1em
 
       img
         +flex(2)
+        flex-basis: 100%
         width: 100%
         height: auto
-        max-height: 400px
+        //max-height: 400px
         +add-border
 
         +media($large-screen)
           width: 20%
           margin-right: $card-margin
+          flex-basis: auto
 
 
   .about-img
