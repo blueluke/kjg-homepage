@@ -17,23 +17,23 @@ layout: default
 **Kirschenhain 1**  
 **63773 Goldbach**   
 Email: [{{ site.email }}](mailto:{{ site.email }})    
-Internet: [{{ site.url }}](http://{{ site.url }})   
+Internet: [www.kjg-goldbach.de]({{ site.url }})   
 
 #### Vertreten durch die Pfarrleitung:
 Jonas Bernhardt, Judith Wünn, Ronja Wünn,    
 Steffen Pohl, Sebastian Braun    
-*\#TODO - Anschrift?*
 
-#### Verantwortlich für den Inhalt:
-*\#TODO - Brauchen wir das?*
+<!-- #### Verantwortlich für den Inhalt:
+*\#TODO - Brauchen wir das?* -->
 
 ***
 
 # Kontakt
 **Email:** [{{ site.email }}](mailto:{{ site.email }})    
-**Telefon:** *\#TODO*
+<!-- **Telefon:** *\#TODO* -->
 
-Oder persönlich jeden Freitag in der **Gruppenstunde** von **16:00h bis 17:00h.** *(Außer in den Schulferien!)*
+Oder persönlich jeden Freitag in der **Gruppenstunde** von **16:00h bis 17:00h.**    
+ *(Außer in den Schulferien!)*
 
 </div>
 
@@ -86,8 +86,9 @@ Weitere Informationen zum Umgang von Nutzerdaten finden Sie in der Datenschutzer
 
 # Urheberrecht
 
-Das gesamte Material der Website der KjG Goldbach unterliegt dem deutschen Urheberrecht.   
-Graphiken, Symbole und Bilder dürfen nur mit ausdrücklicher Genehmigung der KjG Goldbach verwendet werden.
+Das gesamte Material der Website der KjG Goldbach unterliegt dem deutschen Urheberrecht.
+
+**Grafiken, Symbole und Bilder dürfen nur mit ausdrücklicher Genehmigung der KjG Goldbach verwendet werden.**
 
 Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
 
