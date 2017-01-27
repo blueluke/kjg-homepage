@@ -2,6 +2,8 @@
 ---
 // Main JS file - Include all others (except jQuery)
 {% include_relative _jquery.popup.js %};
+{% include_relative _jquery.event.move.js %}
+{% include_relative _jquery.event.swipe.js %}
 {% include_relative _jquery.unslider.js %};
 {% include_relative _jquery.fitvids.js %};
 
