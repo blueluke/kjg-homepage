@@ -17,24 +17,32 @@ $unslider-namespace: "unslider"
 // Styles für Arrow-Buttons
 .unslider-arrow
   display: block
-  width: 32px
-  height: 32px
+  width: 25px
+  height: 100px
   top: 50%
-  right: -50px
-  left: auto
-  margin-top: -16px
+  position: relative
+  margin-top: -50px
   overflow: hidden
-  background: rgba(0, 0, 0, 0.5) no-repeat 50% 50%
+  background-repeat: no-repeat
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAQAAABuQZ3IAAAAi0lEQVR4AU3OISBEQQBAwS0AACS9NxqQgCZpkiYBVddFvWhAAUABAPQCAGC4g/0vTnrBqCfDIZl70J+kMUBPpEwT4FNXxBxz4F1HxHyr4EVTxBLb4EFNxEon4CJSlVNw9AcV9sC16h8osgke1P1ArgXwouVvdQq86ww/GQefusNf7kBviBlxpT8k+gL/Wox4r1d4MwAAAABJRU5ErkJggg==")
   background-size: 7px 11px
-  border-radius: 32px
+  background-position: 50% 50%
+  background-color: rgba(0,0,0,0.15)
+  border-top-left-radius: 6px
+  border-bottom-left-radius: 6px
   text-indent: -999em
   opacity: 1
   transition: opacity .2s
-  position: relative
+
+  &:hover
+    background-color: transparentize(#006d84, 0.2)
 
 .prev
   transform: rotate(-180deg)
+  left: 0px !important
+
+.next
+  right: 0px !important
 
 .unslider
   position: relative
