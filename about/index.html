@@ -47,27 +47,15 @@ layout: default
     <!-- <h3 class="about-header">Unsere Aktionen</h3> -->
     <div class="about-aktionen-body">
       <ul>
-        <li>
-          <img src="{{ site.url }}/assets/img/gruppe.jpg"></img>
-          <div class="about-aktionen-text">
-            <h3 class="about-header">Gruppenstunde</h3>
-            <p>
-              blabla
-            </p>
-          </div>
-        </li>
-        <li>
-          <img src="{{ site.url }}/assets/img/about/zeltlager-gruppenfoto.jpg"></img>
-          <div class="about-aktionen-text">
-            <h3 class="about-header">Zeltlager</h3>
-            <p>
-              Das Higlight unseres KjG-Jahres... Epische Erlebnisse... Rharbarber...
-            </p>
-            <p>
-              Zeltlager blabla
-            </p>
-          </div>
-        </li>
+        {% for a in site.aktionen %}
+          <li>
+            <img src="{{ site.url }}{{ a.img_path }}"></img>
+            <div class="about-aktionen-text">
+              <h3 class="about-header">{{ a.title }}</h3>
+              {{ a.content }}
+            </div>
+          </li>
+        {% endfor %}
       </ul>
     </div>
   </div>
@@ -118,8 +106,8 @@ layout: default
 <script>
 // Unslider der /about/ Seite
 $(document).ready(function() {
-  $('.about-aktionen-body').unslider({
-    speed: 500,
+  var unslider = $('.about-aktionen-body').unslider({
+    speed: 1200,
     delay: 6000,
     keys: true,
     fluid: true,

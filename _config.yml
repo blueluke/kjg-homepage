@@ -30,6 +30,8 @@ collections:
     relative_directory: '_kalender/termine'
   gruppenstunden:
     relative_directory: '_kalender/gruppenstunden'
+  aktionen:
+    relative_directory: '_collections/aktionen'
 
 ### Defaults ###
 defaults:
