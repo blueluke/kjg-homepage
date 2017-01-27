@@ -6,7 +6,7 @@ author: KjG Goldbach
 description: #TODO
 permalink: /:categories/:year/:month/:title/
 # Anzahl der News-Posts auf der Hauptseite
-frontpage-news: 3
+frontpage-news: 4
 
 ### Build Settings ###
 exclude: [new_post.py, readme.md, assets/fonts, Rakefile, Gemfile, Gemfile.lock]
@@ -27,7 +27,9 @@ atom:
 ### Collections ###
 collections:
   calendar:
+    relative_directory: '_kalender/termine'
   gruppenstunden:
+    relative_directory: '_kalender/gruppenstunden'
 
 ### Defaults ###
 defaults:
