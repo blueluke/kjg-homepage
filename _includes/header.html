@@ -1,7 +1,7 @@
 <header class="navigation" role="banner">
   <div class="navigation-wrapper">
     <a href="{{ site.url }}" class="logo">
-      <img src="{{ site.url }}/assets/img/wortmarke.svg" alt="Logo - Seelenbohrer">
+      <img src="{{ site.url }}/assets/img/header/wortmarke.svg" alt="Logo - Seelenbohrer">
     </a>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
     <nav role="navigation">
@@ -26,6 +26,10 @@
         </li>
       </ul>
     </nav>
-    <img src="{{ site.url }}/assets/img/ecke.svg" class="corner-logo"></img>
+    {% if page.url contains "/juggerturnier" %}
+    <img src="{{ site.url }}/assets/img/header/logo_ecke_gruen.svg" class="corner-logo"></img>
+    {% else %}
+    <img src="{{ site.url }}/assets/img/header/logo_ecke.svg" class="corner-logo"></img>
+    {% endif %}
   </div>
 </header>
