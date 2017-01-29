@@ -19,6 +19,15 @@ header.navigation
 
   background-color: $navigation-background
   min-height: auto
+  //IE 11 workarounds
+  +media(-ms-high-contrast active -ms-high-contrast none)
+    min-height: 80px
+  +media(min-width $large-screen+1 -ms-high-contrast active -ms-high-contrast none)
+    min-height: 180px
+  +media(min-width 1200px -ms-high-contrast active -ms-high-contrast none)
+    min-height: 80px
+
+
   width: 100%
   z-index: 999
   font:
