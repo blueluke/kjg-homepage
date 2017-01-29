@@ -1,7 +1,10 @@
 // Push sticky footer to the bottom
 .site
   +display(flex)
-  height: 100vh
+  height: 100%
+  // Workaround für IE11
+  +media(-ms-high-contrast active -ms-high-contrast none)
+    height: 100vh
   +flex-direction(column)
 
 .site-content
