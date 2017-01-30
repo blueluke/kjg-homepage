@@ -4,30 +4,91 @@ root: ../..
 layout: default
 ---
 
-<!-- Da fehlt doch noch was... Sowas wie Inhalt -->
 <div class="jugger-intro-div">
-  {% include jugger_menu.html %}
   <div class="jugger-intro-body">
-    <!-- <div class="jugger-intro-header">
-      <h1>3... 2... 1... Jugger!</h1>
-    </div> -->
-    <h1><img src="{{ site.url }}/assets/img/pfeil.svg"></img>Regeln</h1>
-
-    <div class="jugger-intro-text">
-      <p> Blablabla...</p>
-    </div>
-
-    <div class="jugger-intro-video-wrapper">
-      <div class="youtube-player" data-id="TTayn2aJyD0"></div>
-      <!-- <iframe src="https://www.youtube-nocookie.com/embed/TTayn2aJyD0?showinfo=0&controls=0&loop=1" frameborder="0" allowfullscreen></iframe> -->
+    
+    <div class="jugger-regeln-header">
+      <img src="{{ site.url }}/assets/img/pfeil.svg"></img>
+      <h1>Die Juggger-Regeln</h1>
     </div>
     <div class="jugger-intro-text">
+      {% capture intro %}{% include_relative _intro.md %}{% endcapture %}
+      {{ intro | markdownify }}
+    </div>
+
+    <div class="jugger-intro-video">
+      <div class="jugger-intro-video-wrapper">
+        <div class="youtube-player" data-id="TTayn2aJyD0"></div>
+      </div>
+    </div>
+
+
+    <div class="jugger-regeln-header">
       <h1>Spielablauf</h1>
     </div>
-    <div class="jugger-intro-video-wrapper">
-      <div class="youtube-player" data-id="9V-55xkGe24"></div>
-      <!-- <iframe src="https://www.youtube-nocookie.com/embed/9V-55xkGe24?showinfo=0&controls=0&loop=1" frameborder="0" allowfullscreen></iframe> -->
+    <div class="jugger-intro-text">
+      {% capture spiel %}{% include_relative _spiel.md %}{% endcapture %}
+      {{ spiel | markdownify }}
     </div>
 
+    <div class="jugger-regeln-header">
+      <h1>Spieler und Pompfen</h1>
+    </div>
+    <div class="jugger-pompfen" id="jugger-pompfen">
+      <div class="jugger-pompfen-body">
+        <ul>
+          {% for p in site.pompfen %}
+            <li class="jugger-pompfe">
+              <div class="jugger-pompfen-img">
+                <img src="{{ site.url }}{{ p.img_path }}"></img>
+              </div>
+              <div class="jugger-pompfen-header">
+                <h3>{{ p.title }}</h3>
+              </div>
+              <div class="jugger-pompfen-text">
+                {{ p.content }}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="jugger-regeln-header">
+      <h1>Treffer und Trefferzonen</h1>
+    </div>
+    <div class="jugger-intro-text">
+      {% capture treffer %}{% include_relative _treffer.md %}{% endcapture%}
+      {{ treffer | markdownify }}
+    </div>
+
+    <div class="jugger-regeln-header">
+      <h1>Das Pinnen</h1>
+    </div>
+    <div class="jugger-intro-text">
+      {% capture pinnen %}{% include_relative _pinnen.md %}{% endcapture%}
+      {{ pinnen | markdownify }}
+    </div>
+
+    <div class="jugger-regeln-header">
+      <h1>Weitere Infos</h1>
+    </div>
+    <div class="jugger-intro-text">
+      {% capture outro %}{% include_relative _outro.md %}{% endcapture%}
+      {{ outro | markdownify }}
+    </div>
   </div>
 </div>
+
+<script>
+$(document).ready(function() {
+  var unslider = $('.jugger-pompfen-body').unslider({
+    speed: 1200,
+    delay: 6000,
+    keys: true,
+    fluid: true,
+    nav: false,
+    infinite: true
+  });
+});
+</script>
