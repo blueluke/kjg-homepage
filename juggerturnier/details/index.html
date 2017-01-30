@@ -1,0 +1,98 @@
+---
+title: Unser Turnier - KjG Goldbach
+root: ../..
+layout: default
+---
+
+<div class="jugger-intro-div">
+  <div class="jugger-intro-body">
+
+    <img class="jugger-hero" src="{{ site.url }}/assets/img/jugger/hero2.jpg"></img>
+
+    <div class="jugger-regeln-header">
+      <img src="{{ site.url }}/assets/img/pfeil.svg"></img>
+      <h1>Unser Turnier</h1>
+    </div>
+    <div class="jugger-intro-text">
+      {% capture basics %}{% include_relative _basics.md %}{% endcapture %}
+      {{ basics | markdownify }}
+    </div>
+
+    <div class="jugger-regeln-header">
+      <h1>Anmeldung</h1>
+    </div>
+    <div class="jugger-intro-text">
+      {% capture anmeldung %}{% include_relative _anmeldung.md %}{% endcapture %}
+      {{ anmeldung | markdownify }}
+    </div>
+
+    <div class="jugger-regeln-header">
+      <h1>Ort des Turniers</h1>
+    </div>
+    <div class="jugger-intro-text">
+      {% capture ort %}{% include_relative _ort.md %}{% endcapture %}
+      {{ ort | markdownify }}
+    </div>
+    <div class="jugger-intro-map" id="jugger-map"></div>
+
+    <div class="jugger-regeln-header">
+      <img src="{{ site.url }}/assets/img/pfeil.svg"></img>
+      <h1>Kontakt</h1>
+    </div>
+    <div class="jugger-intro-text">
+      {% capture kontakt %}{% include_relative _kontakt.md %}{% endcapture %}
+      {{ kontakt | markdownify }}
+    </div>
+
+  </div>
+</div>
+
+<script>
+
+var map = L.map('jugger-map',{
+    center: [50.00640, 9.17393],
+    zoom: 18,
+    scrollWheelZoom: false
+});
+
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '<a href="http://osm.org/go/0D2BfFhKA--?m=">Große Karte und Routenberechnung</a> | &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+// Toggle Zooming
+map.on('click', function() {
+  if (map.scrollWheelZoom.enabled()) {
+      map.scrollWheelZoom.disable();
+    }
+    else {
+      map.scrollWheelZoom.enable();
+    }
+});
+
+var bolzplatz = L.polygon([
+    [50.0061937, 9.1741128],
+    [50.0064016, 9.1742836],
+    [50.006612, 9.1736637],
+    [50.0064042, 9.1734929]],
+    { color: '#007576' }
+).addTo(map);
+
+var hoim = L.polygon([
+    [50.006676, 9.1741604],
+    [50.0066229, 9.1743093],
+    [50.0065573, 9.1742526],
+    [50.0066105, 9.1741038]
+]).addTo(map);
+
+var pp1 = L.polygon([
+    [50.0063775, 9.1721525],
+    [50.0064474, 9.1718927],
+    [50.0067046, 9.1721474],
+    [50.0066602, 9.1723547]
+]).addTo(map);
+
+bolzplatz.bindPopup("<b>Das Spielfeld</b>").openPopup();
+hoim.bindPopup("<b>Unser Jugendhaus</b><br/>Umkleide und Verpflegung");
+pp1.bindPopup("<b>Parkmöglichkeiten am Waldschwimmbad</b>");
+
+</script>

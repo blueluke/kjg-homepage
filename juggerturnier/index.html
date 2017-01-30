@@ -11,22 +11,8 @@ layout: default
     <img class="jugger-hero" src="{{ site.url }}/assets/img/jugger/hero.png"></img>
 
     <div class="jugger-intro-text">
-      <h2>
-        Wir möchten Euch und Eure Jugendgruppe gerne herzlich zu unserem ersten Goldbacher Juggerturnier einladen!
-      </h2>
-      <h3>Das Turnier findet am Samstag, den 03. Juni 2017 statt.</h3>
-      <p>
-        Bei dieser Turnierveranstaltung geht es um einen lockeren sportlichen Wettstreit.
-        An erster Stelle steht hierbei selbstverständlich die Freude am sportlich fairen Spiel
-        und der Bewegung. Nichtsdestotrotz winken der Siegermannschaft Ruhm und Ehre!
-      </p>
-      <p>
-        <b>Details zum Turnier und zur Anmeldung sowie weitere Infos übers Juggern findet ihr hier auf unserer Webseite.</b>
-      </p>
-      <p>
-        Für den Fall, dass der Mannschaftssport Jugger unbekannt ist, haben wir
-        außerdem kurze Videos zum Vorstellen dieses Spiels vorbereitet.
-      </p>
+      {% capture intro %}{% include_relative _intro.md %}{% endcapture %}
+      {{ intro | markdownify }}
     </div>
 
     <div class="jugger-intro-video">

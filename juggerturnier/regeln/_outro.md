@@ -1,5 +1,4 @@
-## Mehr Infos zum Thema Jugger findet ihr auch online.
-## Hier noch einige wichtige Links:
+## Mehr Infos zum Thema Jugger findet ihr auch online:
 
 
 * Das **offizielle Jugger-Regelwerk** der deutschen Community [könnt ihr hier herunterladen.](http://www.jugger.org/downloads)
@@ -12,5 +11,4 @@
 
 * ...
 
-**Außerdem könnt ihr uns bei Fragen natürlich gerne kontaktieren!**    
-Das geht am einfachsten [per Email](mailto:{{ site.email }}).
+**Außerdem könnt ihr uns bei Fragen natürlich gerne kontaktieren!** Das geht am einfachsten [per Email](mailto:{{ site.email }}).

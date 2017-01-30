@@ -1,7 +1,6 @@
 ---
 ---
-// This is the single file output by sass. It is intended to ONLY @import other files.
-
+//Extrawurst für die Jugger-Seiten (andere Farben etc.)
 $github-url: "{{ site.url }}"
 
 // 1 - Basics - Libraries, Variablen etc.
@@ -12,23 +11,17 @@ $github-url: "{{ site.url }}"
 @import '1-basics/fonts'
 @import '1-basics/normalize'
 @import '1-basics/vars'
+//Farben überschreiben
+$zusatz:  $kjg-4-türkis
+$main:    $kjg-4-grün
 @import '1-basics/custom'
 @import '1-basics/youtube'
 
-// 2 - Styles für includes
 @import '2-includes/header'
 @import '2-includes/footer'
-@import '2-includes/calendar'
 @import '2-includes/juggermenu'
-@import '2-includes/subscribe'
 
-// 3 - Styles für layouts
-@import '3-layouts/post'
+@import '4-pages/juggerintro'
 
-// 4 - Styles für einzelne Seiten
-@import '4-pages/global'
-@import '4-pages/frontpage'
-@import '4-pages/about'
-@import '4-pages/aktuelles'
-@import '4-pages/impressum'
-@import '4-pages/kalender'
+body
+  +texture-background($zusatz, 0.4)
