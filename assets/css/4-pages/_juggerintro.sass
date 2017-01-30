@@ -12,7 +12,7 @@
 
 .jugger-intro-text
   margin-bottom: $card-margin/2
-  padding: 3%
+  padding: 15px 15px 20px 15px
   width: 100%
   background-color: $white
   color: $zusatz
@@ -24,7 +24,9 @@
     margin-top: 0
     margin-bottom: 0
   p
-    font-size: 1.2em
+    font-size: 1em
+    +media($large-screen)
+      font-size: 1.2em
 
 
 .jugger-intro-video
@@ -95,11 +97,14 @@
     li
       +display(flex)
       +flex-wrap(wrap)
-      height: 520px
+      +align-items(flex-start)
       box-sizing: border-box
 
+      height: 31em
       +media($large-screen)
+        height: 32.5em
         +flex(1.2 0 0px)
+
 
     .jugger-pompfe
       flex-grow: 1
@@ -115,12 +120,13 @@
         margin-bottom: $card-margin
 
     .jugger-pompfen-img
-      height: 300px
-      max-height: 300px
       overflow: hidden
       width: 100%
+      display: inline-block
 
       img
+        display: block
+        max-height: 18.75em
         opacity: 1
         transition: all 0.2s ease-in-out
         width: 100%
@@ -131,6 +137,9 @@
       background-color: $white
       color: $zusatz
       padding: 15px 15px 20px 15px
+      font-size: 0.9em
+      +media($large-screen)
+        font-size: 1em
 
       h4
         margin: 0
@@ -164,7 +173,10 @@
   //margin-bottom: $card-margin/2
 
   img
+    display: none
     width: 10%
+    +media($large-screen)
+      display: inline
 
   h1
     background-color: $zusatz
