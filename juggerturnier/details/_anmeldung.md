@@ -5,7 +5,7 @@ Von 9 bis einschließlich 14 Jahren und dann alles was darüber liegt (Ü14).**
 
 **Mannschaften bestehen aus mindestens 5 Spielern.**    
 Zudem wird je Mannschaft eine volljährige Person als **Mannschaftsverantwortliche\*r** benötigt.   
-(Der oder die Veranwortliche muss selbst nicht zwingend mitspielen).
+(Der oder die Verantwortliche muss selbst nicht zwingend mitspielen).
 
 
 Bei Bedarf füllen wir unvollständige Mannschaften mit Spielern auf.
