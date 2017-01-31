@@ -15,9 +15,12 @@ Ein gültiger Treffer ist dann erreicht, wenn die Pompfe des Treffenden regelkon
 **Trefferzonen sind der gesamte Körper ohne Kopf, Hals und Händen.**    
 Diese Ausnahmen stellen aus Sicherheitsgründen keine Trefferzone dar, um gezielte Schläge auf diesen Bereich zu vermeiden.
 
-Weitere Besonderheiten: Bei dem Spieler, der die Kette führt, zählen auch Treffer an den Händen.    
+**Weitere Besonderheiten:**    
+Bei dem Spieler, der die Kette führt, zählen auch Treffer an den Händen.    
 Bei dem Läufer zählen sowohl Treffer an den Händen, als auch am getragenen Jugg. So kann der Läufer keine Schläge mit dem Jugg abwehren. Es zählen bei allen Spielern auch Treffer von den Spielern aus der eigenen Mannschaft.
 
 
 **Treffen sich zwei Spieler gleichzeitig, muss dies mit „Doppel!“ angesagt werden.**    
 Beide Spieler müssen für die volle Strafzeit aussetzen. Gleichzeitig bedeutet nach dem deutschen Grundregelwerk, dass beide Treffer innerhalb einer halben Sekunde gelandet wurden.
+
+Sonderfall: Bei einem Doppel zwischen einem Kettenspieler und Pompfer müssen beide nur fünf Steine absitzen.

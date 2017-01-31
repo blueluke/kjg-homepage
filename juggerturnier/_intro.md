@@ -12,7 +12,7 @@ und der Bewegung. Nichtsdestotrotz winken der Siegermannschaft Ruhm und Ehre!
 Jugger ist ein schneller Teamsport.
 
 
-Ausgerüstet mit "Pompfen" treten je 5 Spieler gegeneinander an und versuchen, den als als "Jugg" bezeichneten Ball durch die gegnerische Spielfeldhälfte hindurch ins Tor zu befördern.
+Ausgerüstet mit "Pompfen" treten je 5 Spieler gegeneinander an und versuchen, den als "Jugg" bezeichneten Ball durch die gegnerische Spielfeldhälfte hindurch ins Tor zu befördern.
 
 
 Kommunikation, Teamgeist und Strategien sind ausschlaggebend für den Erfolg!    

@@ -5,7 +5,7 @@ Sobald beide Mannschaften bereit sind, beginnt das Spiel mit den Worten des Schi
 
 Die Mannschaften laufen nach dem Wort Jugger in die Mitte des Spielfeldes, wo der Jugg (Spielball) liegt.
 Ziel ist es nun, durch den Läufer so viele Juggs (Punkte) wie möglich zu machen.
-Einen Punkt erreicht der Läufer, wenn er den Jugg ins gegnerische Mal (Tor) platziert.Die Gegner versuchen dies zu verhindern, indem sie ihre Kontrahenten mit den Pompfen oder der Kette “treffen”.
+Einen Punkt erreicht der Läufer, wenn er den Jugg ins gegnerische Mal (Tor) platziert. Die Gegner versuchen dies zu verhindern, indem sie ihre Kontrahenten mit den Pompfen oder der Kette “treffen”.
 
 
 Nachdem eine Mannschaft einen Punk erzielt hat wird das Spiel pausiert, der Jugg in die Mitte zurückgelegt
