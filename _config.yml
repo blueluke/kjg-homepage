@@ -3,7 +3,7 @@ title: KjG Goldbach
 email: kjg-goldbach@gmx.de
 url: http://kjg-goldbach.de/preview
 author: KjG Goldbach
-description: #TODO
+description: Neuigkeiten und Aktionen der Katholischen jungen Gemeinde Goldbach
 permalink: /:categories/:year/:month/:title/
 # Anzahl der News-Posts auf der Hauptseite
 frontpage-news: 4
