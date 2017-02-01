@@ -3,6 +3,7 @@ layout: post
 title: "Einladung zur Weihnachtsfeier"
 date: "2016-12-03 13:35:48 +0100"
 header_img: "/assets/posts/2016-11-19/weihnachten2016.jpg"
+published: false
 ---
 
 ## Termin: 11. Dezember von 16:30h bis ca. 20:00h

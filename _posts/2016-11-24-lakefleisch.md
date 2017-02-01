@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Einladung zum Lakefleisch-Essen"
-date: "2016-12-04 14:42:47 +0100"
+date: "2016-12-01 14:42:47 +0100"
 header_img: "/assets/posts/2016-12-04/header.jpg"
 ---
 
