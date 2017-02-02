@@ -5,10 +5,9 @@
 
 * [Webseite der deutschen Jugger-Community](http://www.jugger.org/portal)
 
-* Hier nochmal der Link zu unseren Erklär-Videos auf Youtube \#TODO
+* Hier nochmal der Link zu unseren [Erklär-Videos auf Youtube](https://youtu.be/4FUxKwKryz8?list=PLyotJBIDIIgqNxpq5aerfkPsa8a7k3xv1)
 
 * [Jugger-Treff der Katakombe Aschaffenburg](http://www.katakombe-ab.de/offener-treff/jugger)
 
-* ...
 
-**Außerdem könnt ihr uns bei Fragen natürlich gerne kontaktieren!** Das geht am einfachsten [per Email](mailto:{{ site.email }}).
+**Außerdem könnt ihr uns bei Fragen natürlich gerne kontaktieren! Das geht am einfachsten [per Email](mailto:{{ site.email }}).**
