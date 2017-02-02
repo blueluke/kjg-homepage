@@ -9,42 +9,18 @@ layout: default
   <div class="about-description">
     <div class="about-img">
       <img id="menschenbohrer" src="{{ site.url }}/assets/img/about/kjg-menschenbohrer.jpg">
-      <img src="{{ site.url }}/assets/img/kjg-leiter.jpg">
+      <img id="hoimleiter" src="{{ site.url }}/assets/img/kjg-leiter.jpg">
     </div>
     <div class="about-text">
       <h3 class="about-header">Wer sind wir?</h3>
       <div>
-      <p>
-        Wir sind die Katholische junge Gemeinde (KjG) aus Goldbach - <br/>
-        Eine Jugendgruppe mit rund 50 aktiven Mitgliedern von 8 bis 26 Jahren.
-      </p>
-      <p>
-        Wir treffen uns jeden Freitag Nachmittag an unserem gemütlichen KjG-Haus: <br/>
-        Dem <a href="{{ site.url }}/about#hoim">"Hoim"</a> am Kirschenhain 1 in Goldbach.
-      </p>
-      <p>
-        In der <b>Gruppenstunde</b> spielen wir zusammen drinnen oder draußen die verschiedensten Spiele.
-        Neben actiongeladenen Spielen machen wir auch kreative Basteleien, Liederabende
-        und jahreszeitabhängige Aktionen wie Fahrradtouren, Fackelläufe, Schwimmbad-Besuche und vieles mehr.<br/>
-        Außerdem gibt es jährlich ein KjG-Wochenende sowie ein großes Zeltlager in den Sommerferien – Die absoluten Highlights im Jahr!<br/>
-        Dabei werden neue Freundschaften geknüpft und gleichzeitig aufrechterhalten, denn darum geht es den meisten Kindern und Gruppenleitern.
-      </p>
-      <p>
-        Mitmachen kann man bei uns ab der Erstkommunion beziehungsweise ab 8 Jahren.<br/>
-        Kommt doch am besten einfach mal bei einer Gruppenstunde vorbei und überzeugt euch selbst!
-        Wir freuen uns über jede und jeden, der unsere Gemeinschaft bereichert.
-      </p>
-      <p>
-        <b>Erste Ansprechpartner sind die aktuellen Pfarrleiter der KjG:</b><br/>
-        Judith und Ronja Wünn, Jonas Bernhardt, Sebastian Braun und Steffen Pohl.<br/>
-        Erreichen kann man uns unter <a href="mailto:kjg-goldbach@gmx.de">kjg-goldbach@gmx.de</a> oder in der Gruppenstunde.
-      </p>
+        {% capture intro %}{% include_relative _intro.md %}{% endcapture %}
+        {{ intro | markdownify }}
       </div>
     </div>
   </div>
 
   <div class="about-aktionen" id="about-aktionen">
-    <!-- <h3 class="about-header">Unsere Aktionen</h3> -->
     <div class="about-aktionen-body">
       <ul>
         {% for a in site.aktionen %}
@@ -61,29 +37,15 @@ layout: default
   </div>
 
   <div class="about-ziele">
-    <img src="{{ site.url }}/assets/img/about/thomas_morus.jpg">
+    <div class="about-img">
+      <img src="{{ site.url }}/assets/img/about/weg.jpg" id="weg">
+      <img src="{{ site.url }}/assets/img/about/zusammenhalt.jpg">
+    </div>
     <div class="about-text">
       <h3 class="about-header">Wofür stehen wir?</h3>
       <div>
-        <p><b>„Nie hätte ich daran gedacht, einer Sache zuzustimmen, die gegen mein Gewissen wäre.“</b>
-          &emsp; Thomas Morus - Schutzpatron der KjG.
-        </p>
-        <p>
-          Die KjG ist ein demokratischer Kinder- und Jugendverband in der Katholischen Kirche Deutschlands.
-          Bei uns können aber auch Nichtkatholiken*innen Mitglied werden.
-        </p>
-        <p>
-          <b>Wir geben Kindern, Jugendlichen und jungen Erwachsenen Raum, einander zu begegnen, Spaß zu haben, sich weiter zu entwickeln
-          und eigene Zugänge zum Glauben zu finden.</b>
-        </p>
-        <p>
-          Als KjG Goldbach sind wir vor allem vor Ort in unserer (Pfarr-) Gemeinde aktiv. Unterstützt werden wir durch den <a href="http://www.kjg-wuerzburg.de">Diözesan</a>- und <a href="httP://www.kjg.de">Bundesverband</a> der KjG.<br/>
-          In unserem Verband machen wir uns stark für Demokratie, Solidarität und Gerechtigkeit, auch in Kirche und Gesellschaft.
-        </p>
-        <p>
-          Die KjG will Kindern und Jugendlichen Mut machen, sich zu engagieren, Verantwortung zu übernehmen, aktiv zu werden für Dinge, die sie angehen und die verändert werden müssen.
-          Die KjG will aber auch, dass Kinder lernen, partnerschaftlich miteinander umzugehen, aufeinander Rücksicht zu nehmen und verantwortungsbewusst zu handeln.
-        </p>
+        {% capture ziele %}{% include_relative _ziele.md %}{% endcapture %}
+        {{ ziele | markdownify }}
       </div>
     </div>
   </div>
@@ -112,8 +74,7 @@ $(document).ready(function() {
     keys: true,
     fluid: true,
     nav: false,
-    animateHeight: true,
-    infinite: true
+    animateHeight: true
   });
 });
 </script>
