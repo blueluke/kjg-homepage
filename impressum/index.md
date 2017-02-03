@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Impressum - KjG Goldbach
 ---
 
 <div class="impressum-div">
