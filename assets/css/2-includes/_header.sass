@@ -41,6 +41,8 @@ header.navigation
     //box-shadow: 0 0 10px $black
     position: relative
     z-index: 9999
+    display: block
+    text-align: center
 
 
   .logo
@@ -83,8 +85,10 @@ header.navigation
     //text-align: center
     font-size: 25px
     +media($horizontal-bar-mode)
-      margin-right: 50px
-      float: right
+      margin-right: 17%
+    +media(75em)
+      margin-right: 0
+
 
   ul.navigation-menu
     clear: both
