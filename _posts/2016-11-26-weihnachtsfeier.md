@@ -14,5 +14,5 @@ Sei bei der Weihnachts-Schatzsuche dabei! Anschließend sitzen wir gemütlich im
 Ziehe bitte warme Kleidung und feste Schuhe an. Über selbstgebackene Plätzchen würden wir uns auch sehr freuen.
 
 
-**Wir freuen uns auch dich!**    
+**Wir freuen uns auf dich!**    
 Deine KjG Goldbach

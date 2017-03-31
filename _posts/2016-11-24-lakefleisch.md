@@ -11,8 +11,8 @@ header_img: "/assets/posts/2016-12-04/header.jpg"
 
 Herzliche Einladung zu unserem traditionellen Lakefleischessen am 28. Dezember!
 
-Für Getränke, Tischdecken, gemütliche Lagerfeueratmosphäre und warme Glut ist gesorgt. <!--more-->
-Die erste Ladung Fleisch kann gegen 12 Uhr gefuttert werden. Bitte bringe aber dein eigenes Besteck mit!
+Für Getränke, Tischdecken, gemütliche Lagerfeueratmosphäre und warme Glut ist gesorgt.
+Die erste Ladung Fleisch kann gegen 12 Uhr gefuttert werden.<!--more--> Bitte bringe aber dein eigenes Besteck mit!
 
 **Meldet euch bitte kurz per Mail und schreibt uns wie viele Fleischportionen ihr essen wollt.**
 
