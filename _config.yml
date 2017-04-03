@@ -1,7 +1,7 @@
 ### Seitenweite Variablen ###
 title: KjG Goldbach
 email: kjg-goldbach@gmx.de
-url: http://kjg-goldbach.de/preview
+url: http://kjg-goldbach.de
 author: KjG Goldbach
 description: Neuigkeiten und Aktionen der Katholischen jungen Gemeinde Goldbach
 permalink: /:categories/:year/:month/:title/
@@ -46,7 +46,7 @@ defaults:
       category: aktuelles
 
 ### Plugins ###
-gems: [jekyll-paginate, jekyll-feed]
+gems: [jekyll-paginate, jekyll-feed, jekyll-redirect-from]
 
 ### Pagination ###
 paginate: 5
