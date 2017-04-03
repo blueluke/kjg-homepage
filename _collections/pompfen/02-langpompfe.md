@@ -1,6 +1,6 @@
 ---
 title: Die Langpompfe
-img_path: "/assets/img/jugger/langpompfe.png"
+img_path: "/assets/img/jugger/langpompfe.jpg"
 ---
 Eine der zur Auswahl stehenden Pompfen ist die Langpompfe:
 

@@ -1,6 +1,6 @@
 ---
 title: Das Q-Tip
-img_path: "/assets/img/jugger/qtip.png"
+img_path: "/assets/img/jugger/qtip.jpg"
 ---
 Der Q-Tip ist zwei Meter lang und hat **zwei Schlagflächen**, ähnlich einem Paddel. Der Griff ist 80 cm lang, so dass sich eine maximale Reichweite von 140 cm ergibt.
 

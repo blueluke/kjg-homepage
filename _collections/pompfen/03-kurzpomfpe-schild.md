@@ -1,6 +1,6 @@
 ---
 title: Die Kurzpompfe und das Schild
-img_path: "/assets/img/jugger/kurzpompfe.png"
+img_path: "/assets/img/jugger/schild.jpg"
 ---
 Eine Kurzpompfe ist 85 cm lang. Dabei macht die Länge des Griffs 20 cm aus.    
 Sie wird einhändig geführt, da man in der anderen Hand den Schild führt.
